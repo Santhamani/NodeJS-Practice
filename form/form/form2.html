@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+	<style>
+		.parallax{
+			min-height: 600px;
+		}
+		.parallax1{
+			min-height: 400px;
+		}
+		sub{
+			font-size: 12px;
+		}
+		 .inline-text[type="text"] { width: 100px; }
+	</style>
+
+<body>
+<div class="container"><!--container-->
+
+<h1 class="text-center">Resume Builder<sub>Lakshya IT Consulting</sub></h1>
+<div class="row"><!--row-->
+
+	<!--Form1-->
+	<form class="form-horizontal">
+
+		<!--Personal Details-->
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax">
+
+	    		<!--First Name-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" >First Name</label>
+			      <div class="col-sm-8">
+			        <input type="text" class="form-control" name="fname" placeholder="Enter First Name">
+			      </div>
+			    </div>
+
+			    <!--Last Name-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Last Name</label>
+			      <div class="col-sm-8">          
+			        <input name="lname" type="text" class="form-control" placeholder="Enter Last Name">
+			      </div>
+			    </div>
+
+			    <!--Father's Name-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Father's Name</label>
+			      <div class="col-sm-8">          
+			        <input type="text" name="faname" class="form-control" placeholder="Father's Name">
+			      </div>
+			    </div>
+
+			    <!--Address-->
+			    <h3>Address</h3>
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Flat No/House No</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="doorno" placeholder="Flat No/House No"><br>
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">Street/Landmark</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="street" placeholder="Street/Landmark"><br>
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">Area</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="area" placeholder="Area"><br>
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">City</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="city" placeholder="City"><br>
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">District</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="district" placeholder="District"><br>
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">Pincode</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="pincode" placeholder="Pincode"><br>
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">State</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="state" placeholder="State"><br>
+			      </div>
+
+			    </div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax">
+
+	    		<!--Email-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" >Email:</label>
+			      <div class="col-sm-8">
+			        <input type="email" class="form-control" name="email" placeholder="Your Email id">
+			      </div>
+			    </div>
+
+			    <!--Mobile No-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Phone No</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="phno" placeholder="Phone No">
+			      </div>
+			    </div>
+
+			    <!--Date of Birth-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Date of Birth</label>
+			      <div class="col-sm-8">          
+			        <input type="date" class="form-control" name="dob" placeholder="Date of Birth">
+			      </div>
+			    </div>
+			    
+			    <!--Gender-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Gender</label>
+
+			        Male <input type="radio" value="male" name="male">
+			        Female <input type="radio" value="female" name="female">
+			   
+			    </div>
+		</div>
+		<!--Personal Details-->
+
+		<!--Education-->
+		<h2 class="text-center">Education Details</h2>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax1">
+	    		<!--Post Graduation-->
+			    <div class="form-group">
+			    	<h3>Post Graduation</h3>
+			      <!--<label class="control-label col-sm-4">Post Graduation</label>-->
+			      <div class="col-sm-8">
+			      	<input type="text" class="form-control" name="pgdegree" placeholder="Degree"><br>
+			        <input type="text" class="form-control" name="pgspecialization" placeholder="Specialization"><br>
+			        <input type="text" class="form-control" name="pguniversity" placeholder="University"><br>
+			        <form class="form-inline">
+			        	From <input type="text" class="form-control inline-text" name="pgfrom">
+			        	To <input type="text" class="form-control inline-text" name="pgto">
+			        </form><br>
+			        <input type="text" class="form-control" name="pgpercentile" placeholder="Percentile/CPGA">
+			      </div>
+			    </div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax1">
+	    		<!--Under Graduation-->
+			    <div class="form-group">
+			    <h3>Under Graduation</h3>
+			    <!--  <label class="control-label col-sm-4" >Under Graduation</label>-->
+			      <div class="col-sm-8">
+			      	<input type="text" class="form-control" name="ugdegree" placeholder="Degree"><br>
+			        <input type="text" class="form-control" name="ugspecialization" placeholder="Specialization"><br>
+			        <input type="text" class="form-control" name="uguniversity" placeholder="University"><br>
+			        <form class="form-inline">
+			        	From <input type="text" class="form-control inline-text" name="ugfrom">
+			        	To <input type="text" class="form-control inline-text" name="ugto">
+			        </form><br>
+			        <input type="text" class="form-control" name="ugpercentile" placeholder="Percentile/CPGA">
+			      </div>
+			    </div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax1">
+	    		<!--Intermediate/Diploma-->
+			    <div class="form-group">
+			    <h3>Intermediate/Diploma</h3>
+			    <!--  <label class="control-label col-sm-4" >Intermediate/Diploma</label>-->
+			      <div class="col-sm-8">
+			      	<input type="text" class="form-control" name="interboard" placeholder="Board"><br>
+			        <form class="form-inline">
+			        	From <input type="text" class="form-control inline-text" name="interfrom">
+			        	To <input type="text" class="form-control inline-text" name="interto">
+			        </form><br>
+			        <input type="text" class="form-control" name="interpercentile" placeholder="Percentile/CPGA">
+			      </div>
+			    </div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax1">
+	    		<!--Merticulation-->
+			    <div class="form-group">
+			    <h3>Merticulation</h3>
+			    <!--  <label class="control-label col-sm-4" >Merticulation</label>-->
+			      <div class="col-sm-8">
+			      	<input type="text" class="form-control" name="merticulation" placeholder="Board"><br>
+			        <form class="form-inline">
+			        	From <input type="text" class="form-control inline-text" name="mertfrom">
+			        	To <input type="text" class="form-control inline-text" name="mertto">
+			        </form><br>
+			        <input type="text" class="form-control" name="mertpercentile" placeholder="Percentile/CPGA">
+			      </div>
+			    </div>
+		</div>
+
+		<button class="btn btn-info">Submit</button>
+
+	</form><!--Form1-->
+</div><!--row-->
+</div><!--container-->
+</body>
+</html>

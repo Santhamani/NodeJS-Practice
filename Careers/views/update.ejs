@@ -1,0 +1,128 @@
+      <!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+ 
+ <script>
+ $(document).ready(function() {
+    $('.form-control-static').editable();
+  /*  $('#role').editable();
+    $('#location').editable();
+    $('#experience').editable();
+    $('#job_type').editable();
+    $('#salary').editable();
+    $('#skills').editable();
+    $('#job_description').editable();*/
+});
+ </script>
+
+ 
+  </head>
+  <body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">ADMIN LOGIN</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a href="/dashboard">Post</a></li>
+        <li><a href="/update">Update</a></li>
+        <li><a href="/edit">Edit</a></li>
+        <li><a href="/delete">Delete</a></li>
+        <li><a href="/login">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="container">  
+<div class="col-lg-12"> 
+  <table class="table" border="1">
+    <tr>
+      <th>Job Id</th>
+     <th>Job Details</th>
+     <!-- <th>Options</th>-->
+    </tr>
+    <% for(var i=0; i< editdata.length; i++) { %>
+      <tr>
+        <td> <%= editdata[i]._id  %> </td>
+        <td>
+              <form action="/updatejob" method="POST" class="form-horizontal">
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label">Job Title</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static" data-type="textarea"><a href="#" id="comments" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].job_title  %> </a></p>
+                    </div>
+                  </div>
+                  <!--<b>Job Title</b> <li><a href="#" id="comments" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].job_title  %> </a></li>-->
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label">Job Role</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static" data-type="textarea"><a href="#" id="role" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].role  %> </a></p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label">Job Location</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static" data-type="textarea"><a href="#" id="location" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].location %> </a></p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label">Job Experience</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static" data-type="textarea"><a href="#" id="experience" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].experience %> </a></p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label">Salary</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static" data-type="textarea"><a href="#" id="salary" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].salary %> </a></p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label">Job type</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static" data-type="textarea"><a href="#" id="job_type" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].job_type %> </a></p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label">Skills</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static" data-type="textarea"><a href="#" id="skills" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].skilss %> </a></p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label">Job Description</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static" data-type="textarea"><a href="#" id="job_description" data-type="textarea" data-pk="10" data-placeholder="Your comments here..." data-title="Enter comments"> <%= editdata[i].job_description %> </a></p>
+                    </div>
+                  </div>
+              <!--    <b>Job Role</b> <li> <%= editdata[i].role  %> </li>
+                  <b>Job Location</b> <li> <%= editdata[i].location  %> </li>
+                  <b>Job Experience</b> <li> <%= editdata[i].experience  %> </li>
+                  <b>Salary</b> <li> <%= editdata[i].salary  %> </li>
+                  <b>Skills</b> <li> <%= editdata[i].skills  %> </li>
+                  <b>Job Description</b> <li> <%= editdata[i].job_description  %> </li>-->
+              </form>
+        </td>
+
+       <!-- <td> <a class="btn btn-danger" type="submit" name="edit_button" href="/update/#<%= editdata[i]._id %>"> Delete</a> </td>-->
+      <!--  <td> <a class="btn btn-warning editlink" href="/edit/<%= editdata[i]._id %>"> Edit </a> </td>-->
+        
+      </tr>
+    <% } %>
+  </table>
+</div>
+  </body>
+</html>

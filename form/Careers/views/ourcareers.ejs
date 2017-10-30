@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ 
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<section id="careers" class="parallax">
+<h1 class="text-center">Current Openings</h1>
+<hr>
+<div class="container">
+  <div class="col-xs-12 col-md-12">
+
+    <% for(var i=0; i<data.length; i++) { %>
+  <ul>
+      <li><%= data[i].job_title %> </li>
+      <li><%= data[i].role %></li>
+      <li><%= data[i].location %></li>
+      <li><%= data[i].experience %></li>
+      <li><%= data[i].salary %></li>
+      <li><%= data[i].skills %></li>
+      <li><%= data[i].job_description %></li>
+  </ul>
+    <% } %>  
+
+    
+  </div> 
+</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      table,th,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+    padding: 5px;
+    text-align: left;
+      }
+   .add{
+    margin: 0 auto;
+    float: none;
+   }
+  .career-input{
+
+      padding: 10px;
+    
+   }
+      </style>
+    <title>Careers</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><center>Careers</center></h1>
+    <p>Welcome to Our Careers</p>
+    <div class="container">
+    <form class="form-horizontal" action="/add" method="post" id="form1">
+      <input type="hidden" id="id" name="id" value="">
+      <table>
+        <div class="row">
+        <tr>
+          <td>
+            <div class="col-lg-12">
+              <div class="col-lg-4 career-input">
+                <input class="form-control" id="job_title" type="text" name="job_title" placeholder="Enter the Job Title" value="">
+              </div>
+              <div class="col-lg-4 career-input">
+                <input class="form-control" id="role" type="text" name="role" placeholder="Enter the Role" value="">
+              </div>
+              <div class="col-lg-4 career-input">
+                <input class="form-control" id="location" type="text" name="location" placeholder="Enter the Location" value="">
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="col-lg-4 career-input">
+                <input class="form-control"  id="experience" type="text" name="experience" placeholder="Enter the Experience" value="">
+              </div>
+              <div class="col-lg-4 career-input">
+                <input class="form-control" id="salary" type="text" name="salary" placeholder="Enter the Salary" value="">
+              </div>
+              <div class="col-lg-4 career-input ">
+                <input class="form-control" id="job_type" type="text" name="job_type" placeholder="Enter the Jobytype" value="">
+              </div>
+            </div>
+            <div class="col-lg-12 career-input">
+              <input class="form-control" id="skills" type="text" name="skills" placeholder="Enter the skills" value="">
+            </div>
+            <div class="col-lg-12 career-input">
+              <textarea class="form-control" id="job_description" name="job_description" placeholder="Enter the Description for postion" value=""></textarea>
+            </div>
+            <div class="col-lg-12 career-input add ">
+              <input class="btn btn-info" type="submit" id="subbtn" name="sub" value="Add Job">
+            </div>
+          </td>
+        </tr>
+        
+          <table>
+            <tr>
+              <th>Job ID</th>
+              <th>Job Title</th>
+              <th>Role</th>
+              <th>Location</th>
+              <th>Experience</th>
+              <th>Salary</th>
+              <th>Job Type</th>
+              <th>Skills</th>
+              <th>Job Description</th>
+              <th>Options</th>
+            </tr>
+          
+            <% for(var i=0; i<data.length; i++) { %>
+            <tr>
+              <td><%= data[i]._id %></td>
+              <td><%= data[i].job_title %></td>
+              <td><%= data[i].role %></td>
+              <td><%= data[i].location %></td>
+              <td><%= data[i].experience %></td>
+              <td><%= data[i].salary %></td>
+              <td><%= data[i].job_type %></td>
+              <td><%= data[i].skills %></td>
+              <td><%= data[i].job_description %></td>
+              
+              <td>
+                <a class="editlink" href="javascript:void(0)" data-id="<%= data[i]._id %>">Edit</a>
+                <a href="/delete?id=<%= data[i]._id %>" onclick='return confirm("You are going to delete this record. Continue")'>Delete</a>
+              </td>
+            </tr>
+            <% } %> 
+          </table>
+        </div>
+      </table>
+    
+    </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+     $(function() { 
+        $('.editlink').on('click', function(){
+          var id = $(this).data('id');
+          $.ajax({
+            method: "GET",
+            url: "/fetchdata",
+            data: { id:id },
+          }).done(function( data ) {
+            //var result = $.parseJSON(data);
+            $('#id').val(data[0]['_id']);
+            $('#job_title').val(data[0]['job_title']);
+            $('#role').val(data[0]['role']);
+            $('#location').val(data[0]['location']);
+            $('#experience').val(data[0]['experience']);
+            $('#salary').val(data[0]['salary']);
+            $('#job_type').val(data[0]['job_type']);
+            $('#skills').val(data[0]['skills']);
+            $('#job_description').val(data[0]['job_description']);
+            $("#subbtn").val('Edit Job');
+            $('#form1').attr('action', '/edit');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

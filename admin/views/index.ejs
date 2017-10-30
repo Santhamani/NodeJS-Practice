@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Careers</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Careers</h1>
+    <p>Welcome to Our Careers</p>
+    <form action="/add" method="post" id="form1">
+      <input type="hidden" id="id" name="id" value="">
+      <table>
+        <tr>
+          <td>
+            <input id="product_name" type="text" name="product_name" placeholder="product_name" value="">
+            <input id="price" type="text" name="price" placeholder="prices" value="">
+            <input id="category" type="text" name="category" placeholder="category" value="">
+            <input type="submit" id="subbtn" name="sub" value="Add Product">
+          </td>
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Action</th>
+            </tr>
+            <% for(var i=0; i<data.length; i++) { %>
+            <tr>
+              <td><%= data[i]._id %></td>
+              <td><%= data[i].product_name %></td>
+              <td><%= data[i].price %></td>
+              <td><%= data[i].category %></td>
+              <td>
+                <a class="editlink" href="javascript:void(0)" data-id="<%= data[i]._id %>">Edit</a>
+                <a href="/delete?id=<%= data[i]._id %>" onclick='return confirm("You are going to delete this record. Continue")'>Delete</a>
+              </td>
+            </tr>
+            <% } %> 
+          </table>
+        </tr>
+      </table>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+     $(function() { 
+        $('.editlink').on('click', function(){
+          var id = $(this).data('id');
+          $.ajax({
+            method: "GET",
+            url: "/fetchdata",
+            data: { id:id },
+          }).done(function( data ) {
+            //var result = $.parseJSON(data);
+            $('#id').val(data[0]['_id']);
+            $('#product_name').val(data[0]['product_name']);
+            $('#price').val(data[0]['price']);
+            $('#category').val(data[0]['category']);
+            $("#subbtn").val('Edit Product');
+            $('#form1').attr('action', '/edit');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mailgun</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  
+    <p> Welcome to a Mailgun form </p>
+        <form method="post" action="/contact">
+            
+            <lable for="username"> Your Name </lable>
+            <input type="text" placeholder="Your Name" id="userName" name="username">
+              
+            <lable for="content"> Enter your message </lable>
+            <textarea type="text" placeholder="Enter your message" id="content" name="content"></textarea>
+            
+            <label for="uplaod">Attach your resume</label>
+            <input name="uplaod" type="file" id="upload">
+
+            <button name="submit"> Submit </button>
+        </form>
+  </body>
+</html>

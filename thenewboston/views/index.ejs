@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <% include templates/header.ejs %>
+
+    <h1><%= name %></h1>
+    <p>Welcome to  ExpressJS</p>
+
+    <h2>Hello Express</h2>
+
+
+<ul>
+      <% for(var i=0;i<5;i++){ %>
+
+          <li> Sanu</li>
+
+     <% } %>
+
+</ul>
+
+<div>
+<b>"Express is a fast, unopinionated minimalist web framework for Node.js" - official web site: Expressjs.com</b>
+<p>Express.js is a web application framework for Node.js. </p>
+<p>It provides various features that make web application development fast and easy which otherwise takes more time using only Node.js.
+Express.js is based on the Node.js middleware module called connect which in turn uses http module. 
+So, any middleware which is based on connect will also work with Express.js. </p>
+</div>
+
+<h3>Advantages of Express.js:</h3>
+<ol>
+    <li>Makes Node.js web application development fast and easy.</li>
+    <li>Easy to configure and customize.</li>
+    <li>Allows you to define routes of your application based on HTTP methods and URLs.</li>
+    <li>Includes various middleware modules which you can use to perform additional tasks on request and response.</li>
+    <li>Easy to integrate with different template engines like Jade, Vash, EJS etc.</li>
+    <li>Allows you to define an error handling middleware.</li>
+    <li>Easy to serve static files and resources of your application.</li>
+    <li>Allows you to create REST API server.</li>
+    <li>Easy to connect with databases such as MongoDB, Redis, MySQL</li>
+</ol>
+
+
+   </body>
+</html>

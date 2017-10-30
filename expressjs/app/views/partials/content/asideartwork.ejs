@@ -1,0 +1,14 @@
+
+<article class="sidebar">
+            <h1 class="sidebar-title">Art Work</h1>
+            <p class="sidebar-body">
+                I don't want the fear of failure to stop me from doing what I really care about.
+                </p>
+            <div class="pixgrid clearfix">
+                <% if(artwork.length > 0){ %>
+                  <%  for(i=0;i<artwork.length;i++){ %>
+                        <img src="/images/artworks/<%= artwork[i]%>" alt="Artwork">
+                  <%  }%>
+                 <%  } %>
+            </div>
+</article>  

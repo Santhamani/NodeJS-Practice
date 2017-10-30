@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+	<style>
+		.parallax{
+			min-height: 500px;
+		}
+		sub{
+			font-size: 12px;
+		}
+		 .inline-text[type="text"] { width: 100px; }
+
+	</style>
+
+<body>
+<div class="container">
+
+<h1 class="text-center">Resume Builder<sub>Lakshya IT Consulting</sub></h1>
+	<div class="row">
+
+	<!--Form1-->
+	<form class="form-horizontal">
+
+		<!--Personal Details-->
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax">
+
+	    		<!--First Name-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" >First Name</label>
+			      <div class="col-sm-8">
+			        <input type="text" class="form-control" name="fname" placeholder="Enter First Name">
+			      </div>
+			    </div>
+
+			    <!--Last Name-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Last Name</label>
+			      <div class="col-sm-8">          
+			        <input name="lname" type="text" class="form-control" placeholder="Enter Last Name">
+			      </div>
+			    </div>
+
+			    <!--Father's Name-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Father's Name</label>
+			      <div class="col-sm-8">          
+			        <input type="text" name="faname" class="form-control" placeholder="Father's Name">
+			      </div>
+			    </div>
+
+			    <!--Address-->
+			    <h3>Address</h3>
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Flat No/House No</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="doorno" placeholder="Flat No/House No">
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">Street/Landmark</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="street" placeholder="Street/Landmark">
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">Area</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="area" placeholder="Area">
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">City</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="city" placeholder="City">
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">District</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="district" placeholder="District">
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">Pincode</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="pincode" placeholder="Pincode">
+			      </div>
+
+			      <label class="control-label col-sm-4" for="pwd">State</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="state" placeholder="State">
+			      </div>
+
+			    </div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax">
+
+	    		<!--Email-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" >Email:</label>
+			      <div class="col-sm-8">
+			        <input type="email" class="form-control" name="email" placeholder="Your Email id">
+			      </div>
+			    </div>
+
+			    <!--Mobile No-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Phone No</label>
+			      <div class="col-sm-8">          
+			        <input type="text" class="form-control" name="phno" placeholder="Phone No">
+			      </div>
+			    </div>
+
+			    <!--Date of Birth-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Date of Birth</label>
+			      <div class="col-sm-8">          
+			        <input type="date" class="form-control" name="dob" placeholder="Date of Birth">
+			      </div>
+			    </div>
+			    
+			    <!--Gender-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" for="pwd">Gender</label>
+
+			        Male <input type="radio" value="male" name="male">
+			        Female <input type="radio" value="female" name="female">
+			   
+			    </div>
+		</div>
+		<!--Personal Details-->
+
+		<!--Education-->
+		<h2>Education Details</h2>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax">
+
+	    		<!--First Name-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" >Post Graduation</label>
+			      <div class="col-sm-8">
+			      	<input type="text" class="form-control" name="pgdegree" placeholder="Degree">
+			        <input type="text" class="form-control" name="pgspecialization" placeholder="Specialization">
+			        <input type="text" class="form-control" name="pguniversity" placeholder="University">
+			        <form class="form-inline">
+			        	From <input type="text" class="form-control inline-text" name="pgfrom">
+			        	To <input type="text" class="form-control inline-text" name="pgto">
+			        </form>
+			        <input type="text" class="form-control" name="pgpercentile" placeholder="Percentile/CPGA">
+			      </div>
+			    </div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 parallax">
+
+	    		<!--First Name-->
+			    <div class="form-group">
+			      <label class="control-label col-sm-4" >Under Graduation</label>
+			      <div class="col-sm-8">
+			      	<input type="text" class="form-control" name="ugdegree" placeholder="Degree">
+			        <input type="text" class="form-control" name="ugspecialization" placeholder="Specialization">
+			        <input type="text" class="form-control" name="uguniversity" placeholder="University">
+			        <form class="form-inline">
+			        	From <input type="text" class="form-control inline-text" name="ugfrom">
+			        	To <input type="text" class="form-control inline-text" name="ugto">
+			        </form>
+			        <input type="text" class="form-control" name="ugpercentile" placeholder="Percentile/CPGA">
+			      </div>
+			    </div>
+		</div>
+
+
+
+		<button class="btn btn-info">Submit</button>
+
+	</form>
+	<!--Form1-->
+	
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

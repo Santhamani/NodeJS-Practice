@@ -1,0 +1,24 @@
+/*
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+*/
+
+body{
+  font: Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  text-align: "center";
+}
+#wrapper{  
+  
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 20px;
+  border-bottom-radius:15px;
+  }

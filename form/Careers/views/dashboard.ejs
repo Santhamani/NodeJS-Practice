@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/jacascripts/delete_job.js"></script>
+  </head>
+  <body>
+   
+   <h1 class="text-center">Job Posting</h1>
+   <div class="col-lg-4">
+
+  <button class="btn btn-warning edit_job">Edit</button>
+
+  <button class="btn btn-danger delete_job" data-id="_id">Delete</button>
+
+   </div>
+<div class="col-lg-8" style="margin:0 auto;float:none;">
+      <form class="form-horizontal" method="POST" name="dashboard-form" action="/careers" >
+        
+        <div class="form-group">
+        <label for="job_id">Job Id</label>
+        <input type="text" class="form-control" name="job_id">
+        </div><br>
+
+        <div class="form-group">
+        <label for="job_title">Job title</label>
+        <input type="text" class="form-control" name="job_title">
+        </div><br>
+
+        <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" class="form-control" name="role">
+        </div><br>
+
+        <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" name="location">
+        </div><br>
+
+        <div class="form-group">
+        <label for="experience">Experience</label>
+        <input type="text" class="form-control" name="experience">
+        </div><br>
+
+        <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="text" class="form-control" name="salary">
+        </div><br>
+
+        <div class="form-group">
+        <label for="job_type">Job Type</label>
+        <input type="text" class="form-control" name="job_type">
+        </div><br>
+
+        <div class="form-group">
+        <label for="skils">Skills</label>
+        <input type="text" class="form-control" name="skills">
+        </div><br>
+
+        <div class="form-group">
+        <label for="job_description">Job Description</label>
+        <textarea type="text" class="form-control" name="job_description"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-info">Submit</button>
+
+      </form>
+
+</div>
+  </body>
+</html>
